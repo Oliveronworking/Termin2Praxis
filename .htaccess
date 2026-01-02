@@ -1,0 +1,13 @@
+# Startseite festlegen
+
+DirectoryIndex index.php index.html
+
+# Falls jemand versucht, / aufzurufen, auf index.php weiterleiten
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Termin2Praxis/
+    
+    # Wenn Root-Verzeichnis aufgerufen wird, index.php laden
+    RewriteRule ^$ index.php [L]
+</IfModule>
